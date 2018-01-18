@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Table</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Please add your aditional information</strong>
+            </div>
+            <div class="panel-body">
+                <div class="row" id="additionalFields">
+                    <div class="col-md-3"><input class="form-control firstname" type="text" name="firstname" placeholder="First Name"></div>
+                    <div class="col-md-3"><input class="form-control lastname" type="text" name="lastname" placeholder="Last Name"></div>
+                    <div class="col-md-3"><input class="form-control email" type="email" name="email" placeholder="Email" required></div>
+                    <div class="col-md-3"><input class="form-control phone" type="text" name="phone" placeholder="Phone"></div>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="invitePeople"> <strong>Do you want to invite more people?</strong>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">&nbsp;</div>
+
+        <div class="peopleInviteTable" style="display: none;">
+            <table class="table table-default table-bordered">
+                <thead>
+                    <tr class="active">
+                        <th>User Type <span class="text-danger">*</span> </th>
+                        <th>First Name <span class="text-danger">*</span> </th>
+                        <th>Last Name <span class="text-danger">*</span> </th>
+                        <th>Email <span class="text-danger">*</span> </th>
+                        <th>Phone</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="customFields">
+                    <tr class="form-group">
+                        <td>
+                            <select class="form-control q_usertype" name="usertype">
+                                        <option value="">Select</option>
+                                        <option value="Advisor">Advisor</option>
+                                        <option value="Client">Client</option>
+                                        <option value="CPA">CPA</option>
+                                        <option value="Spouse">Spouse</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                        </td>
+                        <td><input class="form-control q_firstname" type="text" name="firstname" placeholder="First Name"></td>
+                        <td><input class="form-control q_lastname" type="text" name="lastname" placeholder="Last Name"></td>
+                        <td><input class="form-control q_email" type="email" name="email" placeholder="Email" required></td>
+                        <td><input class="form-control q_phone" type="text" name="phone" placeholder="Phone"></td>
+                        <td><button type="button" class="btn btn-danger btn-sm removeField"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-primary addField"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add</button>
+            <button type="button" class="btn btn-primary getJsonData">Json Data</button>
+        </div>
+
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="js/table.js" type="text/javascript"></script>
+</body>
+
+</html>
